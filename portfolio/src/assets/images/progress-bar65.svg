@@ -1,0 +1,5 @@
+<svg width="240" height="240" viewBox="-30 -30 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+    <circle r="110" cx="120" cy="120" fill="transparent" stroke="#333333" stroke-width="30" stroke-dasharray="690.8000000000001px" stroke-dashoffset="0"/>
+    <circle r="110" cx="120" cy="120" stroke="#813397" stroke-width="30" stroke-linecap="round" stroke-dashoffset="242px" fill="transparent" stroke-dasharray="690.8000000000001px"/>
+    <text x="72px" y="137px" fill="#ffffff" font-size="52px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -236px)">65%</text>
+  </svg>
