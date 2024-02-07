@@ -6,10 +6,10 @@ const nodemailer = require("nodemailer");
 // const router = express.Router();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 const CONNECTION_URI =
-  "mongodb+srv://admin:<password>@cluster0.2b1rw41.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://admin:Jnpug9GI4Vpph38U@cluster0.2b1rw41.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(CONNECTION_URI);
 
 const cardSchema = new mongoose.Schema({
