@@ -16,9 +16,9 @@
     "nodemailer": "^6.9.8"
   },
   "scripts": {
+    "start": "node index.js",
     "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
     "build": "webpack --config=Scripts/config/webpack.prod.js",
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Ivanov",
