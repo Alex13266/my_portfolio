@@ -28,47 +28,47 @@ app.use(express.json());
 const router = express.Router();
 app.use("/", router);
 
-// const contactEmail = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: "aleksivanov845@gmail.com",
-//     pass: "ymfstonqownhiddw",
-//   },
-// });
+const contactEmail = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "aleksivanov845@gmail.com",
+    pass: "ymfstonqownhiddw",
+  },
+});
 
-// contactEmail.verify((err) => {
-//   if (err) {
-//     console.error(err);
-//   } else {
-//     console.log("Ready To Send");
-//   }
-// });
+contactEmail.verify((err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("Ready To Send");
+  }
+});
 
-// router.post("/contact", (request, response) => {
-//   const name = request.body.firstName + request.body.lastName;
-//   const email = request.body.email;
-//   const message = request.body.message;
-//   const phone = request.body.phone;
-//   const mail = {
-//     from: name,
-//     to: "aleksivanov845@gmail.com",
-//     subject: "Contact Form Submission - Portfolio",
-//     html: `
-//     <p>Name: ${name}</p>
-//     <p>Email: ${email}</p>
-//     <p>Phone: ${phone}</p>
-//     <p>Message: ${message}</p>
-//     `,
-//   };
+router.post("/contact", (request, response) => {
+  const name = request.body.firstName + request.body.lastName;
+  const email = request.body.email;
+  const message = request.body.message;
+  const phone = request.body.phone;
+  const mail = {
+    from: name,
+    to: "aleksivanov845@gmail.com",
+    subject: "Contact Form Submission - Portfolio",
+    html: `
+    <p>Name: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>Phone: ${phone}</p>
+    <p>Message: ${message}</p>
+    `,
+  };
 
-//   contactEmail.sendMail(mail, (err) => {
-//     if (err) {
-//       response.json(err);
-//     } else {
-//       response.json({ code: 200, status: "Message Sent" });
-//     }
-//   });
-// });
+  contactEmail.sendMail(mail, (err) => {
+    if (err) {
+      response.json(err);
+    } else {
+      response.json({ code: 200, status: "Message Sent" });
+    }
+  });
+});
 
 // - - - - - - - - - - - - -
 
