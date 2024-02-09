@@ -15,7 +15,9 @@ export const Projects = () => {
 
   const fetchCards = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/cards");
+      const response = await axios.get(
+        "https://my-portfolio-osbd-server.vercel.app/api/cards"
+      );
       setCards(response.data);
     } catch (err) {
       console.error("Error fetching cards:", err);
@@ -23,43 +25,43 @@ export const Projects = () => {
   };
 
   return (
-    <section className="projects" id="projects">
+    <section className='projects' id='projects'>
       <Container>
         <Row>
           <Col>
-            <div className="projects-body">
+            <div className='projects-body'>
               <h2
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-duration="800"
+                data-aos='fade-up'
+                data-aos-delay='100'
+                data-aos-duration='800'
               >
                 Projects
               </h2>
               <div
-                className="projects-title"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-duration="800"
+                className='projects-title'
+                data-aos='fade-up'
+                data-aos-delay='100'
+                data-aos-duration='800'
               >
                 <span></span>
               </div>
-              <div className="projects-cards">
+              <div className='projects-cards'>
                 {cards.map((card) => (
-                  <div key={card.id} className="projects-card">
-                    <div className="projects-card-image">
+                  <div key={card.id} className='projects-card'>
+                    <div className='projects-card-image'>
                       {" "}
-                      {card.image && <img src={card.image} alt="project" />}
+                      {card.image && <img src={card.image} alt='project' />}
                     </div>
                     <h5>{card.title}</h5>
                     <p>{card.description}</p>
-                    <div className="projects-card-button">
+                    <div className='projects-card-button'>
                       {card.githubLink && (
                         <a
                           href={card.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
-                          <button className="github-button">GitHub</button>
+                          <button className='github-button'>GitHub</button>
                         </a>
                       )}
                     </div>
