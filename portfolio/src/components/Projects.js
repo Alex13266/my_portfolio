@@ -16,7 +16,7 @@ export const Projects = () => {
   const fetchCards = async () => {
     try {
       const response = await axios.get(
-        "https://my-portfolio-osbd-server.vercel.app/api/cards"
+        "https://my-portfolio-osbd-server.vercel.app"
       );
       setCards(response.data);
     } catch (err) {
