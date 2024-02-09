@@ -74,7 +74,7 @@ app.use("/", router);
 
 app.get("/api/cards", async (request, response) => {
   try {
-    const cards = await Card.find();
+    const cards = await Card.find().lean();
     response.json(cards);
   } catch (err) {
     console.error("Error fetching cards: ", err);
