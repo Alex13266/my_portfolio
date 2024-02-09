@@ -23,7 +23,7 @@ const Card = mongoose.model("Card", cardSchema);
 
 const corsConfig = {
   origin: "*",
-  credential: true,
+  credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
 app.options("", cors(corsConfig));
