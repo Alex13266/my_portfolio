@@ -39,13 +39,16 @@ export const Footer = () => {
     setButtonText("Sending...");
 
     try {
-      let response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "Application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
+      let response = await fetch(
+        "https://my-portfolio-osbd-server.vercel.app/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "Application/json;charset=utf-8",
+          },
+          body: JSON.stringify(formDetails),
+        }
+      );
 
       setButtonText("Send");
       let result = await response.json();
@@ -78,31 +81,31 @@ export const Footer = () => {
 
   return (
     <>
-      <img className="email-image" src={emailLines} alt="image" />
-      <section className="footer" id="footer">
+      <img className='email-image' src={emailLines} alt='image' />
+      <section className='footer' id='footer'>
         <Container>
-          <div className="footer-body">
-            <h2 data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <div className='footer-body'>
+            <h2 data-aos='fade-up' data-aos-delay='100' data-aos-duration='800'>
               Contact me
             </h2>
             <div
-              className="footer-title"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="800"
+              className='footer-title'
+              data-aos='fade-up'
+              data-aos-delay='100'
+              data-aos-duration='800'
             >
               <span></span>
             </div>
-            <div className="footer-contactForm">
+            <div className='footer-contactForm'>
               {contextHolder}
               <form onSubmit={handleSubmit}>
-                <Row className="justify-content-center">
-                  <Row className="input-container">
-                    <Col sm={6} className="input-box">
+                <Row className='justify-content-center'>
+                  <Row className='input-container'>
+                    <Col sm={6} className='input-box'>
                       <input
-                        type="text"
+                        type='text'
                         value={formDetails.firstName}
-                        required="required"
+                        required='required'
                         onChange={(e) =>
                           onFormUpdate("firstName", e.target.value)
                         }
@@ -119,12 +122,12 @@ export const Footer = () => {
                     <span>Last Name</span>
                   </Col> */}
                   </Row>
-                  <Row className="input-container">
-                    <Col sm={6} className="input-box">
+                  <Row className='input-container'>
+                    <Col sm={6} className='input-box'>
                       <input
-                        type="email"
+                        type='email'
                         value={formDetails.email}
-                        required="required"
+                        required='required'
                         onChange={(e) => onFormUpdate("email", e.target.value)}
                       />
                       <span>Email Address</span>
@@ -139,12 +142,12 @@ export const Footer = () => {
                     <span>Phone number</span>
                   </Col> */}
                   </Row>
-                  <Row className="input-container">
-                    <Col className="input-box">
+                  <Row className='input-container'>
+                    <Col className='input-box'>
                       <textarea
-                        row="6"
+                        row='6'
                         value={formDetails.message}
-                        required="required"
+                        required='required'
                         onChange={(e) =>
                           onFormUpdate("message", e.target.value)
                         }
@@ -152,9 +155,9 @@ export const Footer = () => {
                       <span>Message</span>
                     </Col>
                   </Row>
-                  <Row className="form-button-box">
-                    <Col className="form-button">
-                      <button type="submit">
+                  <Row className='form-button-box'>
+                    <Col className='form-button'>
+                      <button type='submit'>
                         <h5>{buttonText}</h5>
                       </button>
                     </Col>
