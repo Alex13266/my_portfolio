@@ -72,27 +72,9 @@ app.use("/", router);
 
 // - - - - - - - - - - - - -
 
-const MAX_RETRIES = 3;
-
 app.get("/api/cards", async (request, response) => {
-  let retryCount = 0;
-
-  const fetchCards = async () => {
-    try {
-      return await Card.find().lean();
-    } catch (err) {
-      if (retryCount < MAX_RETRIES) {
-        retryCount++;
-        console.error(`Retrying (${retryCount}/${MAX_RETRIES})...`);
-        return fetchCards();
-      } else {
-        throw err;
-      }
-    }
-  };
-
   try {
-    const cards = await fetchCards();
+    const cards = await Card.find();
     response.json(cards);
   } catch (err) {
     console.error("Error fetching cards: ", err);
