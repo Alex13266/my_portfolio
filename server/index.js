@@ -22,7 +22,7 @@ const cardSchema = new mongoose.Schema({
 const Card = mongoose.model("Card", cardSchema);
 
 const corsConfig = {
-  origin: "https://my-portfolio-teal-eight-65.vercel.app/",
+  origin: "https://my-portfolio-teal-eight-65.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
