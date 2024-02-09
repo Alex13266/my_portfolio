@@ -82,21 +82,21 @@ app.get("/api/cards", async (request, response) => {
   }
 });
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
+// const storage = multer.memoryStorage();
+// const upload = multer({ storage: storage });
 
-app.post("/api/cards", upload.single("image"), async (request, response) => {
-  const { title, description, githubLink } = request.body;
-  const image = request.file ? request.file.buffer.toString("base64") : "";
+// app.post("/api/cards", upload.single("image"), async (request, response) => {
+//   const { title, description, githubLink } = request.body;
+//   const image = request.file ? request.file.buffer.toString("base64") : "";
 
-  try {
-    const newCard = new Card({ image, title, description, githubLink });
-    await newCard.save();
-  } catch (err) {
-    console.error("Error creating card:", err);
-    res.status(500).send("Internal Server Error");
-  }
-});
+//   try {
+//     const newCard = new Card({ image, title, description, githubLink });
+//     await newCard.save();
+//   } catch (err) {
+//     console.error("Error creating card:", err);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
 
 // Mailer
 
