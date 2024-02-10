@@ -145,10 +145,13 @@ p {
   height: 40px;
 }
 @media only screen and (max-width: 950px) {
+  .about {
+    padding: 50px 0 70px 0;
+  }
   .about-hexs-inner {
     flex-direction: column !important;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
   }
   .hex:before {
     border-bottom: 31px solid #5594ff;
@@ -158,6 +161,7 @@ p {
   }
   .about-me {
     flex-direction: column !important;
+    padding: 50px 0 0 0 !important;
   }
   .about-me-info,
   .about-me-stacks {

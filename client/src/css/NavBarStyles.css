@@ -172,4 +172,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .navbar-text {
     justify-content: center;
   }
+  nav.navbar a.navbar-brand img {
+    width: 70px !important;
+  }
 }

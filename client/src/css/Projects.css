@@ -89,4 +89,7 @@ p {
   .projects-card {
     width: 350px !important;
   }
+  .projects-card:hover {
+    transform: scale(1.05);
+  }
 }

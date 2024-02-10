@@ -80,3 +80,9 @@ h5 {
   height: 3px;
   background: black;
 }
+@media only screen and (max-width: 950px) {
+  .skill-bx p {
+    font-size: 15px !important;
+    margin: 10px 0 25px 0;
+  }
+}

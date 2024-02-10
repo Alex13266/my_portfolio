@@ -55,12 +55,13 @@ span {
   font-family: "Raleway", sans-serif;
 }
 .banner p {
-  color: #b8b8b8;
+  color: #fff;
   font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 85%;
   text-align: left;
+  /* padding: 0 0.5rem; */
 }
 .banner button {
   color: #fff;
@@ -119,6 +120,12 @@ span {
   }
   .banner h1 {
     font-size: 23px;
+  }
+  .banner p {
+    padding: 0 0.5rem;
+  }
+  .banner .tagline {
+    margin: 0 0 16px 0.5rem;
   }
   .header-image {
     width: 100%;
