@@ -15,6 +15,7 @@ This project was built using these technologies.
 
 ## Features
 🎨 Styled with React-Bootstrap and Css with easy to customize colors
+
 📱 Fully Responsive
 
 ## Getting Started
