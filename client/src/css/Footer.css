@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.skill p,
+span,
+h2,
+h5 {
+  font-family: "Raleway", sans-serif !important;
+}
+.footer {
+  background-color: #252934;
+  padding: 100px 0 100px 0;
+}
+.footer-body h2 {
+  text-align: center;
+  font-size: 40px;
+}
+.input-container {
+  display: grid;
+  justify-content: center;
+  margin: 8px 0;
+}
+.input-box,
+.input-box textarea {
+  position: relative;
+  width: 550px !important;
+  padding: 0;
+}
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  background: #252934;
+}
+.input-box span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.input-box input:valid ~ span,
+.input-box input:focus ~ span,
+.input-box textarea:valid ~ span,
+.input-box textarea:focus ~ span {
+  color: rgb(89, 141, 254);
+  transform: translateX(10px) translateY(-7px);
+  font-size: 13px;
+  padding: 0 10px;
+  background: #252934;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  letter-spacing: 0.1em;
+}
+.input-box textarea {
+  resize: none;
+  height: 150px !important;
+}
+.form-button-box {
+  width: 600px;
+}
+.form-button {
+  display: flex;
+  /* justify-content: center; */
+}
+.form-button button {
+  border: 1px solid white;
+  padding: 10px 20px;
+  position: relative;
+  background: linear-gradient(to right, white, 50%, #252934 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: 0.2s ease-in-out;
+}
+.form-button button:hover {
+  background-position: left;
+}
+.form-button button:hover h5 {
+  color: #252934;
+}
+.form-button button h5 {
+  margin: 0;
+  color: white;
+}
+.email-image {
+  background: #f3f3f3;
+  height: 150px;
+}
+/* Pop alert for messages */
+:where(
+    .css-dev-only-do-not-override-1b0bdye
+  ).ant-notification-topRight.ant-notification-stack
+  > .ant-notification-notice-wrapper {
+  top: 80px !important;
+  right: 0;
+}
+/* - - -  */
+.footer-title {
+  display: flex;
+  justify-content: center;
+}
+.footer-title span {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.footer-title span::before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: white;
+}
+
+/* Media Query Phone */
+@media only screen and (max-width: 950px) {
+  .input-box,
+  .input-box textarea {
+    width: 300px !important;
+  }
+  .form-button {
+    justify-content: center;
+  }
+  .email-image {
+    height: 55px !important;
+  }
+}

@@ -1,0 +1,82 @@
+/***** Skills Css *****/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.skill p,
+span,
+h2,
+h5 {
+  font-family: "Raleway", sans-serif !important;
+}
+.skill {
+  padding: 50px 0 50px 0;
+  position: relative;
+  background: rgb(46, 193, 253);
+  background: linear-gradient(
+    156deg,
+    rgba(46, 193, 253, 1) 0%,
+    rgba(144, 72, 255, 1) 100%
+  );
+}
+.skill-bx {
+  background: rgb(135, 206, 235, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 64px;
+  text-align: center;
+  padding: 50px 50px;
+}
+.skill h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+.skill p {
+  color: black;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+.react-multiple-carousel__arrow--left {
+  left: calc(2% + 1px) !important;
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(2% + 1px) !important ;
+}
+.skill-title {
+  display: flex;
+  justify-content: center;
+}
+.skill-title span {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.skill-title span::before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: black;
+}
